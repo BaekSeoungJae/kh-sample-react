@@ -6,15 +6,26 @@ import "./App.css";
 // 조건부 연산자 : {}내에서 조건부 연산자 사용 가능
 // 조건부 렌더링 : && 연산자의 특징을 활용해서 조건에 따라 화면 렌더링
 // 인라인 스타일링 :
+// import Greeting from "./Greeting";  // return <Greeting />;
+import Welcome from "./Welcome";
+import Section from "./Section";
+import MyComponent from "./MyComponent";
 
+// 컴포넌트의 재활용
 function App() {
-  const name = "리액트";
-  const styleC = {
-    backgroundColor: "#222",
-    color: "royalblue",
-    fontSize: "2em",
-  };
-  return <p style={styleC}>{name === "리액트" && <h1>리액트 입니다.</h1>}</p>;
+  return (
+    <>
+      <Section title="스포츠" content="야구는 역시 LG Twins 이시지" />
+      <Section title="정치" content="정치는 잘 모릅네다" />
+      <br />
+      <MyComponent name="은채" age={20} />
+      <MyComponent name="카즈하" />
+      <MyComponent age={25} />
+      <MyComponent>
+        <h1>여기는 르세라핌 입니다.</h1>
+      </MyComponent>
+    </>
+  );
 }
 
 export default App;
