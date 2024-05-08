@@ -13,10 +13,15 @@ import MyComponent from "./MyComponent";
 import UserList from "./UserList";
 import TodoList from "./TodoList";
 import CreateRef from "./Ref";
+import NameCard from "./NameCard";
 
 // 컴포넌트의 재활용
 function App() {
-  return <></>;
+  return (
+    <>
+      <NameCard />
+    </>
+  );
 }
 
 /* <Section title="스포츠" content="야구는 역시 LG Twins 이시지" />
